@@ -1,0 +1,45 @@
+body, html{
+  height: 100%;
+  font-family: 'Sofia';
+  }
+  .bg {
+  background-image: url('../src/assets/images/home-fondo.gif');
+  height: 87vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;   
+  font-size: 30px;
+  color: white;
+  padding-left: 5%;
+  }
+
+  .bgLogin {
+    background-image: url('../src/assets/images/362551_1_600.jpeg');
+    height: 87vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    }
+
+    .bgProductos{  
+    background-image: url('../src/assets/images/productos-fondo.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    font-size: 17px;
+    color: white;
+    padding-left: 5%;    
+    }
+    
+    
+    .bgNotFound{  
+      background-image: url('../src/assets/images/404.gif');
+      height: 100vh;      
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;   
+      font-size: 30px;
+      color:black;
+      padding-left: 5%;    
+      }
