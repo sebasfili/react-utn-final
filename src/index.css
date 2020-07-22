@@ -43,3 +43,22 @@ body, html{
       color:black;
       padding-left: 5%;    
       }
+.bgRegistro{  
+background-image: url('../src/assets/images/camarera.jpg');
+height: 87vh;      
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;   
+font-size: 30px;
+color:whitesmoke;
+padding-left: 5%;    
+}
+
+.bgRegistro input
+{
+  background-color: ghostwhite;
+  opacity: 70%;
+  color: black;
+  font-weight: bolder;  
+  font-size: x-large;
+}

@@ -3,6 +3,7 @@ import '../assets/styles/Registro.css';
 import firebase from '../config/firebase';
 import { Button, Form, Col, Alert } from 'react-bootstrap';
 
+// poner como imagen de fondo un atril de recepción de restaurant
 
 function Registro(props) {
     const [nombre, setNombre] = useState("");
@@ -48,8 +49,7 @@ function Registro(props) {
     });
 
     return (
-        <div>
-
+        <div className="bgRegistro">
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <div class="containerRegistro">
                     <h2>Registro de Cliente</h2>

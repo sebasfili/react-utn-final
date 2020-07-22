@@ -10,7 +10,7 @@ import {
 
 } from "react-router-dom";
 import Login from './pages/Login';
-
+import Perfil from './pages/Perfil';
 import Registro from './pages/Registro';
 import Detalle from './pages/Detalle';
 import NotFound from './pages/NotFound';
@@ -36,7 +36,7 @@ function App() {
     localStorage.setItem('usuario', usuario);
   };
 
-  const logOut=()=>{
+  const logOut = () => {
     setLoggedin(false);
     setUsuario(undefined);
     localStorage.removeItem('loggedin');
@@ -52,10 +52,12 @@ function App() {
           </Navbar.Brand>
           <Navbar.Brand>
             <Link to="/productos/" className="navbar-brand">Cocteles</Link>
-          </Navbar.Brand>          
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/perfil/" className="navbar-brand">Perfil</Link>
+          </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Brand>  {'¡Bienvenido'.concat(' ', usuario, '!')}
-            </Navbar.Brand>
+            <Navbar.Brand>  {'¡Bienvenido'.concat(' ', usuario, '!')}</Navbar.Brand>
             <Navbar.Text>
               <Link to="/login/" className="navbar-brand" onClick={logOut}>Log Out</Link>
             </Navbar.Text>
@@ -67,7 +69,9 @@ function App() {
               <Route path="/home">
                 <Home />
               </Route>
-            
+              <Route path="/perfil">
+               <Perfil></Perfil>
+              </Route>
               <Route path="/productos">
                 <Productos />
               </Route>
