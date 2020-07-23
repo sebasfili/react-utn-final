@@ -11,7 +11,7 @@ function Perfil(props) {
     return (
         <div className="bgPerfil">
             <Form>
-                <div className="containerRegistro">
+                <div className="containerRegistro inputOpacity">
                     <h2>Perfil de Cliente</h2>
                     <Form.Row >
                         <Col>

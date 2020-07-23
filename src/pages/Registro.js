@@ -51,7 +51,7 @@ function Registro(props) {
     return (
         <div className="bgRegistro">
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-                <div class="containerRegistro">
+                <div class="containerRegistro inputOpacity">
                     <h2>Registro de Cliente</h2>
                     <Form.Row >
                         <Col>
