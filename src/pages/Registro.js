@@ -99,6 +99,7 @@ function Registro(props) {
                                 required />
                         </Col>
                     </Form.Row>
+                   <br/>
                     <Form.Row>
                         <Col>
                             <Button variant="danger" block type="submit" >
