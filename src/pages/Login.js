@@ -22,9 +22,11 @@ function Login(props) {
             event.preventDefault();
             event.stopPropagation();
         } else {
+            // const provider = new firebase.auth.GoogleAuthProvider();
+            // firebase.auth().signInWithPopup(provider);
             firebase.auth().signInWithEmailAndPassword(email, contraseña)
                 .then((data) => {
-                    context.updateSession(true, email);
+                    context.updateSession(true, email, data.user.uid);
                     setShowSuccess(true);
                     history.push('/');
 

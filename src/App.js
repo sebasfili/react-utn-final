@@ -22,6 +22,7 @@ import Home from './pages/Home';
 function App() {
   const [loggedIn, setLoggedin] = useState(localStorage.getItem('loggedin') || false);
   const [usuario, setUsuario] = useState(localStorage.getItem('usuario') || '');
+  const [usrId, setUsrId] = useState(localStorage.getItem('usrId') || '');
 
 
   // useEffect(() => {
@@ -29,11 +30,13 @@ function App() {
   //   localStorage.setItem('usuario', usuario);
   // }, []);
 
-  const updateSession = (loggedInU, nombreU) => {
+  const logIn = (loggedInU, nombreU, usrIdU) => {
     setLoggedin(loggedInU);
     setUsuario(nombreU);
+    setUsrId(usrIdU);
     localStorage.setItem('loggedin', loggedIn);
     localStorage.setItem('usuario', usuario);
+    localStorage.setItem('usrId', usrId);
   };
 
   const logOut = () => {
@@ -41,6 +44,7 @@ function App() {
     setUsuario(undefined);
     localStorage.removeItem('loggedin');
     localStorage.removeItem('usuario');
+    localStorage.removeItem('usrId');
   };
 
   if (loggedIn) {
@@ -63,14 +67,14 @@ function App() {
             </Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
-        <AppContext.Provider value={{ updateSession: updateSession }}>
+        <AppContext.Provider value={{ updateSession: logIn }}>
           <Fade>
             <Switch>
               <Route path="/home">
                 <Home />
               </Route>
               <Route path="/perfil">
-               <Perfil></Perfil>
+                <Perfil></Perfil>
               </Route>
               <Route path="/productos">
                 <Productos />
@@ -106,7 +110,7 @@ function App() {
             </Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
-        <AppContext.Provider value={{ updateSession: updateSession }}>
+        <AppContext.Provider value={{ updateSession: logIn }}>
           <Fade>
             <Switch>
               <Route path="/registro">
